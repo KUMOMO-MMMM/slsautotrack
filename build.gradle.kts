@@ -32,10 +32,10 @@ dependencies {
 
 gradlePlugin {
     plugins {
-        register("SLSAutoTracker") {
+        register("autoTracker") {
+            id = "com.mq.sls.auto.track"
+            group = "com.mq.sls.auto.track"
             version = "0.0.1"
-            group = "com.mq.sls.track"
-            id = "auto"
             implementationClass = "com.mq.sls.track.AutoTrackPlugin"
         }
     }
@@ -47,17 +47,14 @@ sourceSets {
     }
 }
 
-publishing {
-    repositories {
-        maven {
-            url = uri("${rootProject.file("./")}/.repo")
-        }
-    }
-    publications {
-        create<MavenPublication>("release") {
-            groupId = "com.mq.sls.track"
-            artifactId = "auto"
-            version = "0.0.1"
-        }
-    }
-}
+//publishing {
+//    repositories {
+//        mavenLocal()
+//    }
+//    publications {
+//        create<MavenPublication>("release") {
+////            groupId = "com.mq.sls.auto.track"
+////            artifactId = "track"
+//        }
+//    }
+//}
