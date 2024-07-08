@@ -1,9 +1,16 @@
+import org.jetbrains.kotlin.resolve.compatibility
+
 plugins {
     // 使用 kotlin dsl 作为 gradle 构建脚本语言
     `kotlin-dsl`
     `maven-publish`
 }
 
+kotlin {
+    compilerOptions {
+        jvmToolchain(11)
+    }
+}
 dependencies {
     val agpVersion = "8.2.2"
     val kotlinVersion = "1.7.10"
