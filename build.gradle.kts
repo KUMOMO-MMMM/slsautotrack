@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.resolve.compatibility
-
 plugins {
     // 使用 kotlin dsl 作为 gradle 构建脚本语言
     `kotlin-dsl`
@@ -33,9 +31,9 @@ dependencies {
 gradlePlugin {
     plugins {
         register("autoTracker") {
-            id = "com.mq.sls.auto.track"
-            group = "com.mq.sls.auto.track"
-            version = "0.0.1"
+            group = "com.github.KUMOMO-MMMM.slsautotrack"
+            id = "com.github.KUMOMO-MMMM.slsautotrack"
+            version = "0.0.4"
             implementationClass = "com.mq.sls.track.AutoTrackPlugin"
         }
     }
@@ -47,14 +45,18 @@ sourceSets {
     }
 }
 
-//publishing {
-//    repositories {
-//        mavenLocal()
-//    }
-//    publications {
-//        create<MavenPublication>("release") {
-////            groupId = "com.mq.sls.auto.track"
-////            artifactId = "track"
+publishing {
+    repositories {
+        mavenLocal()
+//        maven {
+//            url = uri("${rootProject.file("./")}/.repo")
 //        }
-//    }
-//}
+    }
+    publications {
+        create<MavenPublication>("release") {
+            groupId = "com.github.KUMOMO-MMMM.slsautotrack"
+            artifactId = "tracker"
+            version = "0.0.4"
+        }
+    }
+}
