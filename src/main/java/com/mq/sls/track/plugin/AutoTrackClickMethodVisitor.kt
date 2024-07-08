@@ -1,4 +1,4 @@
-package com.sls.track.plugin
+package com.mq.sls.track.plugin
 
 import com.android.build.api.instrumentation.ClassData
 import org.objectweb.asm.Handle

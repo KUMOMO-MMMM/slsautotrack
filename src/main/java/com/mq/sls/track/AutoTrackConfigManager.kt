@@ -1,4 +1,4 @@
-package com.sls.autotrack
+package com.mq.sls.track
 
 class AutoTrackConfigManager {
     companion object {

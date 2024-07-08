@@ -1,4 +1,4 @@
-package com.sls.autotrack
+package com.mq.sls.track
 
 import com.android.build.api.instrumentation.AsmClassVisitorFactory
 import com.android.build.api.instrumentation.ClassContext
@@ -6,7 +6,7 @@ import com.android.build.api.instrumentation.ClassData
 import com.android.build.api.instrumentation.InstrumentationParameters
 import com.android.build.api.instrumentation.InstrumentationScope
 import com.android.build.api.variant.AndroidComponentsExtension
-import com.sls.track.plugin.AutoTrackClickMethodVisitor
+import com.mq.sls.track.plugin.AutoTrackClickMethodVisitor
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.objectweb.asm.ClassVisitor

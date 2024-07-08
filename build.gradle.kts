@@ -11,6 +11,7 @@ kotlin {
         jvmToolchain(11)
     }
 }
+
 dependencies {
     val agpVersion = "8.2.2"
     val kotlinVersion = "1.7.10"
@@ -32,10 +33,10 @@ dependencies {
 gradlePlugin {
     plugins {
         register("SLSAutoTracker") {
-            id = "com.sls.track"
             version = "0.0.1"
-            group = "auto"
-            implementationClass = "com.sls.autotrack.AutoTrackPlugin"
+            group = "com.mq.sls.track"
+            id = "auto"
+            implementationClass = "com.mq.sls.track.AutoTrackPlugin"
         }
     }
 }
@@ -54,7 +55,7 @@ publishing {
     }
     publications {
         create<MavenPublication>("release") {
-            groupId = "com.sls.track"
+            groupId = "com.mq.sls.track"
             artifactId = "auto"
             version = "0.0.1"
         }

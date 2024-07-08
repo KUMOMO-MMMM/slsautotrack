@@ -1,4 +1,4 @@
-package com.sls.track.plugin
+package com.mq.sls.track.plugin
 
 import org.objectweb.asm.Opcodes
 
